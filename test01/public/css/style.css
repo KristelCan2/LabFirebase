@@ -1,0 +1,157 @@
+/* CSS Document */
+:root {
+    --primary: #110c0cff;
+    --light: #ffffff;
+    --grey1: #eeeeee;
+    --grey2: #f0f1f1;
+    --orange: #d6731d;
+    --lblue1: #559ee0;
+    --lblue2: #b4c5e5;
+    --dark-text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    background-color: var(--grey2);
+    color: var(--dark-text);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header .navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .navbar-brand,
+.header .nav-link {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+.header .nav-link:hover {
+    color: var(--orange) !important;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary);
+}
+
+/* General Elements */
+.formatDiv {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Container */
+.imgBlock {
+    height: 150px;
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--lblue1);
+    object-fit: cover;
+}
+
+/* Announcement Div */
+.divAnuncio {
+    background-color: var(--light);
+    border: 1px solid var(--lblue1);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px var(--lblue2);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.divAnuncio:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button,
+input[type='button'] {
+    background-color: var(--orange);
+    color: var(--light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type='button']:hover {
+    background-color: var(--primary);
+}
+
+/* Forms */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='file'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--lblue1);
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .navbar-brand,
+    .header .nav-link {
+        font-size: 1rem;
+    }
+
+    .formatDiv {
+        width: 90%;
+    }
+
+    .divAnuncio {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 50px;
+    }
+
+    .header .navbar {
+        padding: 10px;
+    }
+
+    .imgBlock {
+        height: 120px;
+        width: 120px;
+    }
+
+    button,
+    input[type='button'] {
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "test01",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000t\u0000e\u0000s\u0000t\u00000\u00001\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Remma27/test01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Remma27/test01/issues"
+  },
+  "homepage": "https://github.com/Remma27/test01#readme",
+  "dependencies": {
+    "firebase": "^11.0.1"
+  }
+}

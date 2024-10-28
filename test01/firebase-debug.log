@@ -1,0 +1,292 @@
+[debug] [2024-10-28T00:03:20.787Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:03:20.792Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-10-28T00:03:20.792Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:03:20.793Z] Platform:      linux
+[debug] [2024-10-28T00:03:20.793Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:03:20.793Z] Time:          Sun Oct 27 2024 18:03:20 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:03:20.793Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:03:20.867Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:03:20.868Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/emmanuel/Desktop/proyectos/test01
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-28T00:03:52.510Z] Using project from CLI flag: test01-4d85f
+[debug] [2024-10-28T00:03:52.515Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:03:52.517Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:03:52.522Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:03:53.457Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:03:53.457Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:03:53.459Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:03:53.716Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:29:48.974Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:29:48.983Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:29:48.984Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:29:48.984Z] Platform:      linux
+[debug] [2024-10-28T00:29:48.985Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:29:48.985Z] Time:          Sun Oct 27 2024 18:29:48 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:29:48.985Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:29:49.149Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:29:49.150Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:29:49.151Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:29:49.154Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:49.155Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:49.158Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:29:49.158Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:29:49.159Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:29:49.739Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:29:49.739Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:29:49.740Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:29:49.742Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:49.743Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:49.744Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:29:50.389Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:29:50.389Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:29:50.392Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:29:50.666Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:29:55.321Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:29:55.326Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:29:55.327Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:29:55.327Z] Platform:      linux
+[debug] [2024-10-28T00:29:55.328Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:29:55.328Z] Time:          Sun Oct 27 2024 18:29:55 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:29:55.328Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:29:55.407Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:29:55.409Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:29:55.409Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:29:55.411Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:55.411Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:55.415Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:29:55.415Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:29:55.415Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:29:56.127Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:29:56.127Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:29:56.128Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:29:56.128Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:56.128Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:29:56.129Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:29:56.735Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:29:56.736Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:29:56.737Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:29:57.065Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:30:02.801Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:30:02.804Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:30:02.804Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:30:02.805Z] Platform:      linux
+[debug] [2024-10-28T00:30:02.805Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:30:02.805Z] Time:          Sun Oct 27 2024 18:30:02 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:30:02.805Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:30:02.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:30:02.881Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:30:02.882Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:30:02.883Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:02.883Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:02.884Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:30:02.885Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:30:02.885Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:30:03.601Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:30:03.601Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:30:03.601Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:30:03.602Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:03.602Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:03.603Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:30:04.108Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:30:04.108Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:30:04.109Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:30:04.401Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:30:18.580Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:30:18.583Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:30:18.583Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:30:18.583Z] Platform:      linux
+[debug] [2024-10-28T00:30:18.583Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:30:18.583Z] Time:          Sun Oct 27 2024 18:30:18 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:30:18.584Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:30:18.658Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:30:18.659Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:30:18.660Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:30:18.661Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:18.662Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:18.663Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:30:18.663Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:30:18.663Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:30:19.251Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:30:19.251Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:30:19.251Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:30:19.252Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:19.252Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:30:19.253Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:30:19.877Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:30:19.877Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:30:19.878Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:30:20.103Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:33:34.095Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:33:34.098Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:33:34.098Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:33:34.098Z] Platform:      linux
+[debug] [2024-10-28T00:33:34.098Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:33:34.098Z] Time:          Sun Oct 27 2024 18:33:34 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:33:34.099Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:33:34.165Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:33:34.166Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:33:34.166Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:33:34.167Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:33:34.168Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:33:34.170Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:33:34.170Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:33:34.170Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:33:34.936Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:33:34.936Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:33:34.936Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:33:34.937Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:33:34.937Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:33:34.937Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:33:35.545Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:33:35.545Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:33:35.546Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:33:35.815Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-10-28T00:34:25.526Z] ----------------------------------------------------------------------
+[debug] [2024-10-28T00:34:25.529Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-10-28T00:34:25.529Z] CLI Version:   13.23.0
+[debug] [2024-10-28T00:34:25.530Z] Platform:      linux
+[debug] [2024-10-28T00:34:25.530Z] Node Version:  v20.16.0
+[debug] [2024-10-28T00:34:25.530Z] Time:          Sun Oct 27 2024 18:34:25 GMT-0600 (Central Standard Time)
+[debug] [2024-10-28T00:34:25.530Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-28T00:34:25.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-28T00:34:25.600Z] > authorizing via signed-in user (datulipsmo02@gmail.com)
+[debug] [2024-10-28T00:34:25.600Z] [iam] checking project test01-4d85f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-10-28T00:34:25.601Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:34:25.602Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:34:25.603Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions [none]
+[debug] [2024-10-28T00:34:25.606Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions x-goog-quota-user=projects/test01-4d85f
+[debug] [2024-10-28T00:34:25.606Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-10-28T00:34:26.349Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions 200
+[debug] [2024-10-28T00:34:26.349Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test01-4d85f:testIamPermissions {}
+[debug] [2024-10-28T00:34:26.350Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project test01-4d85f:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2024-10-28T00:34:26.351Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:34:26.351Z] Checked if tokens are valid: true, expires at: 1730077328708
+[debug] [2024-10-28T00:34:26.351Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f [none]
+[debug] [2024-10-28T00:34:26.949Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f 403
+[debug] [2024-10-28T00:34:26.949Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test01-4d85f {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-28T00:34:26.950Z] Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-28T00:34:27.223Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/test01-4d85f had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project test01-4d85f. Please make sure the project exists and your account has permission to access it.
